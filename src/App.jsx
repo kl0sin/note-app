@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.scss';
+
+
+import { Login } from './pages/Login/Login'
+import { Navigation } from './components/Navigation/Navigation';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Router>
+          <div className="container">
+            <Navigation />
+            <Route exact path="/login" component={Login} />
+          </div>
+        </Router>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -20,6 +31,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <Login />
       </div>
     );
   }
