@@ -7,7 +7,8 @@ export class Navigation extends Component {
   render() {
     return (
       <nav className="navigation">
-        <Link to="/login">Login page</Link>
+        <Link className="navigation__link" to="/">Home page</Link>
+        <Link className="navigation__link" to="/login">Login page</Link>
       </nav>
     )
   }
